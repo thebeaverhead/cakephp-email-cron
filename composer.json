@@ -1,0 +1,24 @@
+{
+    "name": "thebeaverhead/cakephp-email-cron",
+    "description": "Email cron plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "php": "^7.0",
+        "cakephp/cakephp": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7.14|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EmailCron\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EmailCron\\Test\\": "tests/",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+        }
+    }
+}
