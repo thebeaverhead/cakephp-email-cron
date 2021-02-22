@@ -164,7 +164,7 @@ class EmailCron
       $emailCron = $this->EmailCron->patchEntity($emailCron, [
         'data' => json_encode($this->data),
         'increment_data' => json_encode($incrementDataToSave),
-        'sent_date' => $this->sendDate,
+        'send_date' => $this->sendDate,
       ]);
 
       $this->EmailCron->save($emailCron);

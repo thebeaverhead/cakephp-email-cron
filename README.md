@@ -83,7 +83,6 @@ $emailCron
         ]
     ])
     ->addIncrement();
-);
 ```
 
 create email template.ctp
