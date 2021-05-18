@@ -15,12 +15,14 @@ class UseLongtext extends AbstractMigration
   {
     $table = $this->table('email_cron');
 
-    $table->changeColumn('data', 'longtext', [
+    $table->changeColumn('data', 'text', [
       'default' => null,
+      'limit' => \Phinx\Db\Adapter\MysqlAdapter::TEXT_LONG,
       'null' => true
     ]);
-    $table->changeColumn('increment_data', 'longtext', [
+    $table->changeColumn('increment_data', 'text', [
       'default' => null,
+      'limit' => \Phinx\Db\Adapter\MysqlAdapter::TEXT_LONG,
       'null' => true
     ]);
 
