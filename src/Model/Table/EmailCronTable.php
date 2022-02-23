@@ -46,12 +46,12 @@ class EmailCronTable extends Table
   {
     $validator
       ->boolean('available')
-      ->allowEmptyString('available', false);
+      ->allowEmptyString('available', null, false);
 
     $validator
       ->maxLength('email', 320)
       ->requirePresence('email', 'create')
-      ->allowEmptyString('email', false)
+      ->allowEmptyString('email', null, false)
       ->email('email', false);
 
     $validator
@@ -65,12 +65,12 @@ class EmailCronTable extends Table
     $validator
       ->scalar('template_path')
       ->requirePresence('template_path', 'create')
-      ->allowEmptyString('template_path', false);
+      ->allowEmptyString('template_path', null, false);
 
     $validator
       ->scalar('subject')
       ->requirePresence('subject', 'create')
-      ->allowEmptyString('subject', false);
+      ->allowEmptyString('subject', null, false);
 
     $validator
       ->allowEmptyString('data');
@@ -80,11 +80,11 @@ class EmailCronTable extends Table
 
     $validator
       ->boolean('is_increment')
-      ->allowEmptyString('is_increment', false);
+      ->allowEmptyString('is_increment', null, false);
 
     $validator
       ->boolean('is_sent')
-      ->allowEmptyString('is_sent', false);
+      ->allowEmptyString('is_sent', null, false);
 
     return $validator;
   }
